@@ -1,0 +1,18 @@
+﻿
+<h2>COMBO Page</h2>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div>
+    @Html.Action("BusinessInfoList")
+</div>
+<div>
+    @{Html.RenderAction("AddressList");}
+</div> 

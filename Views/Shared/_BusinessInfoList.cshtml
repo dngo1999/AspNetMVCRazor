@@ -1,0 +1,31 @@
+﻿@model IEnumerable<AspNetMVCRazor.Models.BusinessInfo.BusinessInfo>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessInfoName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessInfoPublic)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessInfoName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessInfoPublic)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BusinessInfoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BusinessInfoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BusinessInfoId })
+        </td>
+    </tr>
+}
+
+</table>
