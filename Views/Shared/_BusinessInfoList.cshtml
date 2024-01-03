@@ -18,7 +18,8 @@
             @Html.DisplayFor(modelItem => item.BusinessInfoName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.BusinessInfoPublic)
+            @*Html.DisplayFor(modelItem => item.BusinessInfoPublic)*@
+            @(item.BusinessInfoPublic == 1 ? "Yes":"No")
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.BusinessInfoId }) |

@@ -26,9 +26,13 @@ namespace AspNetMVCRazor.Controllers
         }
         public IEnumerable<BusinessInfo> GetAllBusinessInfo()
         {
-            var biz = from b in db.BusinessInfo
-                                orderby b.BusinessInfoId
-                                select b;
+            biz.Add(new BusinessInfo { BusinessInfoId = 123, BusinessInfoName = "2M & 3D", BusinessInfoPublic = 1 });
+            biz.Add(new BusinessInfo { BusinessInfoId = 8300, BusinessInfoName = "Lamar Square", BusinessInfoPublic = 0 });
+            biz.Add(new BusinessInfo { BusinessInfoId = 8351, BusinessInfoName = "Twin Fountains", BusinessInfoPublic = 1 });
+
+            //var biz = from b in db.BusinessInfo
+            //                    orderby b.BusinessInfoId
+            //                    select b;
             return biz;
         }
 
